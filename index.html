@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 - Web Frontend Development I - Course Home</title>
     <meta name="description" content="Course home page for WDD 231 Web Frontend Development | featuring assignments, projects, and course progress tracking.">
-    <meta name="author" content="Your Name Here">
+    <meta name="author" content="Etiuzale Ikpemhinoghena">
     
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     
@@ -20,30 +21,48 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo-section">
-                <img src="images/logo.svg" alt="WDD 231 Logo" class="logo">
-                <span class="student-name">Etiuzale Ikpemhinoghena</span>
+        <nav>
+            <div class="header-container">
+                <div class="logo-section">
+                    <img src="images/logo.svg" alt="WDD 231 Logo" class="logo">
+                    <span class="student-name">Etiuzale Ikpemhinoghena</span>
+                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
             <nav class="main-nav">
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link active">Home</a></li>
-            <li><a href="chamber/index.html" class="nav-link">Chamber</a></li>
-            <li><a href="final/index.html" class="nav-link">Final</a></li>
-        </ul>
-    </nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="chamber/index.html" class="nav-link">Chamber</a></li>
+                    <li><a href="final/index.html" class="nav-link">Final</a></li>
+                </ul>
+            </nav>
+        </nav>
     </header>
-
-
 
     <main>
         <h1>Home</h1>
+        
+        <!-- About Me and Student Photo Section -->
+        <section class="hero-section">
+            <div class="about-student-container">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>Hi! I'm Etiuzale Ikpemhinoghena. I love Computer Science and Psychology. I am currently pursuing the Web and Computer Programming Certificate and a Bachelor's degree in Software Development, and I plan to continue learning, building projects, and growing as a developer.</p>
+
+                    <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and connecting with the developer community. I believe in continuous learning and staying updated with the latest web development trends and standards.</p>
+                </div>
+                <div class="student-photo">
+                    <h2>Student Photo</h2>
+                    <div class="photo-container">
+                        <img src="images/profile.avif" alt="Etiuzale Ikpemhinoghena - Photo" class="student-img">
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <section class="course-work">
             <h2>Course Work</h2>
@@ -53,7 +72,7 @@
                 <button class="filter-btn" data-filter="CSE">CSE Courses</button>
             </div>
             <div class="courses-grid" id="courses-container">
-                
+                <!-- Courses will be populated by JavaScript -->
             </div>
             <div class="credits-total">
                 <p>Total Credits Required: <span id="total-credits">0</span></p>

@@ -111,3 +111,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initializeAria();
 });
+
+const navBar = document.querySelector('#nav-bar');
+const navButton = document.querySelector('.hamburger');
+
+navButton.addEventListener('click', () => {
+  navButton.classList.toggle('show'); 
+  navBar.classList.toggle('show');  
+});

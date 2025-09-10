@@ -243,3 +243,69 @@
         color: var(--text-primary);
     }
 }
+
+
+
+
+/* About Me & Student Photo Section */
+.hero-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.about-student-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.about-me, .student-photo {
+    flex: 1;
+}
+
+.about-me h2, .student-photo h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.about-me p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.photo-container {
+    max-width: 300px;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin: 0 auto;
+}
+
+.student-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.student-img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+    .about-student-container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--spacing-2xl);
+    }
+    .about-me, .student-photo {
+        flex: 1;
+    }
+    .about-me {
+        padding-right: var(--spacing-lg);
+    }
+}

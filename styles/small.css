@@ -441,3 +441,57 @@ footer {
     white-space: nowrap;
     border: 0;
 }
+
+
+
+
+
+
+/* About Me & Student Photo - Mobile first */
+.hero-section {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.about-student-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+    padding: 0 var(--spacing-md);
+}
+
+.about-me, .student-photo {
+    width: 100%;
+}
+
+.about-me h2, .student-photo h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-me p {
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+}
+
+.photo-container {
+    max-width: 250px;
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    margin: 0 auto;
+}
+
+.student-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.student-img:hover {
+    transform: scale(1.05);
+}

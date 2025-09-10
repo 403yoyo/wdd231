@@ -8,12 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let lastModified = document.lastModified;
         if (!lastModified) return 'Unknown';
 
-        // Parse as UTC to avoid timezone issues
+
         let modifiedDate = new Date(lastModified + ' UTC');
 
         if (isNaN(modifiedDate.getTime())) return lastModified;
 
-        // Format in local time (or change timeZone if needed)
         const options = {
             year: 'numeric',
             month: 'long',
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             minute: '2-digit',
             second: '2-digit',
             hour12: false,
-            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone // user's local timezone
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
         };
 
         return modifiedDate.toLocaleString('en-US', options);
