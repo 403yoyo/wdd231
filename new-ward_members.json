@@ -1,0 +1,38 @@
+{
+  "family_name": "Okafor-Li",
+  "move_in_date": "2024-09-15",
+  "number_of_people": 6,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Chinedu Okafor",
+      "gender": "Male",
+      "birthdate": "1982-03-14"
+    },
+    {
+      "name": "Mei Li",
+      "gender": "Female",
+      "birthdate": "1985-07-29"
+    },
+    {
+      "name": "Ngozi Okafor",
+      "gender": "Female",
+      "birthdate": "2008-02-10"
+    },
+    {
+      "name": "Wei Li",
+      "gender": "Male",
+      "birthdate": "2010-06-25"
+    },
+    {
+      "name": "Ifunanya Okafor",
+      "gender": "Female",
+      "birthdate": "2013-11-08"
+    },
+    {
+      "name": "Chen Li",
+      "gender": "Male",
+      "birthdate": "2016-01-30"
+    }
+  ]
+}
