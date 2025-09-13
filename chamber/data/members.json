@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Sakura Bean Bakery",
+    "address": "89 Marina Bay, Singapore 018956",
+    "phone": "+65 9876 5432",
+    "website": "https://sakurabakery.sg",
+    "image": "bakery.jpg",
+    "membershipLevel": 3,
+    "category": "Food & Beverage",
+    "description": "Artisan bakery specializing in fresh breads, pastries, and custom cakes."
+  },
+  {
+    "name": "Accra Digital Solutions",
+    "address": "156 Osu Oxford Street, Accra, Ghana",
+    "phone": "+233 244 567 890",
+    "website": "https://accradigital.gh",
+    "image": "electronics.jpg",
+    "membershipLevel": 2,
+    "category": "Technology",
+    "description": "Your one-stop shop for electronics and gadgets."
+  },
+  {
+    "name": "Abuja Adventure Tours",
+    "address": "78 Central Business District, Abuja, Nigeria",
+    "phone": "+234 906 123 4567",
+    "website": "https://abujaadventures.ng",
+    "image": "tours.jpg",
+    "membershipLevel": 1,
+    "category": "Travel",
+    "description": "Guided tours and adventure packages across Nigeria."
+  },
+  {
+    "name": "Ndebele Art Gallery",
+    "address": "23 Church Street, Harare, Zimbabwe",
+    "phone": "+263 24 789 012",
+    "website": "https://ndebeleart.zw",
+    "image": "artisans.jpg",
+    "membershipLevel": 2,
+    "category": "Handicrafts",
+    "description": "Handmade crafts and artisan goods from local makers."
+  },
+  {
+    "name": "Manila Literary Hub",
+    "address": "67 Rizal Avenue, Manila, Philippines",
+    "phone": "+63 2 8765 4321",
+    "website": "https://manilabooks.ph",
+    "image": "bookstore.jpg",
+    "membershipLevel": 1,
+    "category": "Retail",
+    "description": "Wide selection of books, stationery, and gifts."
+  },
+  {
+    "name": "Kilimanjaro Grand Resort",
+    "address": "12 Uhuru Street, Dar es Salaam, Tanzania",
+    "phone": "+255 22 876 543",
+    "website": "https://kilimanjarogrand.tz",
+    "image": "hotel.jpg",
+    "membershipLevel": 3,
+    "category": "Hospitality",
+    "description": "Luxury accommodations with top-notch amenities."
+  },
+  {
+    "name": "Bangkok Fitness Studio",
+    "address": "88 Sukhumvit Road, Bangkok, Thailand",
+    "phone": "+66 2 345 6789",
+    "website": "https://bangkokfitness.th",
+    "image": "fitness.jpg",
+    "membershipLevel": 2,
+    "category": "Wellness",
+    "description": "State-of-the-art fitness center and wellness programs."
+  }]

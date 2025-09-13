@@ -1,0 +1,70 @@
+@media (min-width: 768px) {
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        z-index: auto;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
+    }
+
+    .directory-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .list-view {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .list-view .member-card {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-gap: 1.5rem;
+        text-align: left;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .list-view .member-card img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .list-view .member-card h3 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin: 0;
+    }
+
+    .list-view .member-card p {
+        grid-column: 2 / 3;
+        margin: 0;
+    }
+
+    .list-view .member-card a {
+        grid-column: 2 / 3;
+        margin-top: 0.5rem;
+    }
+}
