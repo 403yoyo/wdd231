@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function setActiveNavLink() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const currentPage = window.location.pathname.split('/').pop() || 'course.html';
         
         navLinks.forEach(link => {
             const linkPage = link.getAttribute('href').split('/').pop();
             
             if (linkPage === currentPage || 
-                (currentPage === '' && linkPage === 'index.html') ||
-                (currentPage === 'index.html' && linkPage === 'index.html')) {
+                (currentPage === '' && linkPage === 'course.html') ||
+                (currentPage === 'course.html' && linkPage === 'course.html')) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');

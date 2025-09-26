@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ik's Chamber of Commerce - Home. Supporting local businesses and community growth.">
+    <meta name="author" content="Ikpemhinoghena Etiuzale">
+    <meta name="keywords" content="Chamber of Commerce, IK's, local businesses, business directory, community, networking, home">
+    <title>Ik's Chamber of Commerce | Home</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="IK's Chamber of Commerce">
+    <meta property="og:description" content="Welcome to IK's Chamber of Commerce. Supporting local businesses and organizations.">
+    <!-- <meta property="og:image" content="images/social-image.png"> -->
+    <meta property="og:url" content="https://403yoyo.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IK's Chamber of Commerce">
+    <meta name="twitter:description" content="Welcome to IK's Chamber of Commerce. Supporting local businesses and organizations.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-name">IK's Chamber of Commerce</h1>
+            <nav class="main-nav">
+                <button id="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/artisans.jpg" alt="Community Hero" class="hero-img" loading="lazy">
+            <button class="hero-cta">Keynote Tickets</button>
+        </section>
+        <section class="home-panels">
+            <h2>Home</h2>
+            <div class="panels-row">
+                <div class="panel events-panel">
+                    <div class="panel-header">Events</div>
+                    <div class="panel-body">
+                        <ul class="events-list">
+                            <li><strong>Chamber Annual General Meeting</strong> - Oct 5, 10:00am WAT</li>
+                            <li><strong>Local Business Expo</strong> - Oct 12, 9:00am WAT</li>
+                            <li><strong>Small Business Grants Info Session</strong> - Oct 18, 3:00pm WAT</li>
+                            <li><strong>Women in Business</strong> - Oct 22, 12:30pm WAT</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel weather-panel">
+                    <div class="panel-header">Current Weather</div>
+                    <div class="panel-body weather-info" id="weather-panel">
+                        <div class="weather-loading">Loading weather data...</div>
+                    </div>
+                </div>
+                <div class="panel forecast-panel">
+                    <div class="panel-header">3-Day Forecast</div>
+                    <div class="panel-body" id="forecast-panel">
+                        <div class="weather-loading">Loading forecast...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="business-highlights">
+            <div class="business-cards" id="spotlight-cards">
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h3>IK's Chamber of Commerce</h3>
+            <p>1, IK's Lane, opposite nothing.</p>
+            <!-- <p>IK's, chamber road</p> -->
+            <p>+1 123 456 789</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ikpemhinoghena" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; <span id="copyright-year"></span> Ikpemhinoghena Etiuzale | WDD 231 | Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
