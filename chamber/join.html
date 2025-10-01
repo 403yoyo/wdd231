@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join IK's Chamber of Commerce - Become a member and grow your business">
+    <meta name="author" content="Ikpemhinoghena Etiuzale">
+    <meta name="keywords" content="Chamber of Commerce, membership, join, business network">
+    <title>Join | IK's Chamber of Commerce</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Join IK's Chamber of Commerce">
+    <meta property="og:description" content="Become a member of IK's Chamber of Commerce and access exclusive benefits for your business.">
+    <meta property="og:url" content="https://403yoyo.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join IK's Chamber of Commerce">
+    <meta name="twitter:description" content="Become a member of IK's Chamber of Commerce and access exclusive benefits for your business.">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/join.js"></script>
+
+    
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-name">IK's Chamber of Commerce</h1>
+            <nav class="main-nav">
+                <button id="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Membership Application</h1>
+        <div class="join-container">
+            <div class="membership-form">
+                <h2>Application Form</h2>
+                <form method="get" action="thankyou.html">
+                    <div class="form-group">
+                        <label for="first-name">First Name <span class="required">*</span></label>
+                        <input type="text" id="first-name" name="first-name" required 
+                               title="Please enter your first name" autocomplete="given-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last-name">Last Name <span class="required">*</span></label>
+                        <input type="text" id="last-name" name="last-name" required 
+                               title="Please enter your last name" autocomplete="family-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" 
+                               title="Please enter your organizational title" 
+                               autocomplete="organization-title" 
+                               pattern="[A-Za-z\s\-]{7,}" 
+                               placeholder="e.g., Marketing Director">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required 
+                               title="Please enter a valid email address" 
+                               autocomplete="email" 
+                               placeholder="example@domain.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Cell Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required 
+                               title="Please enter your mobile phone number" 
+                               autocomplete="tel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="organization">Organization <span class="required">*</span></label>
+                        <input type="text" id="organization" name="organization" required 
+                               title="Please enter your organization name" 
+                               autocomplete="organization">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="membership-level">Membership Level <span class="required">*</span></label>
+                        <select id="membership-level" name="membership-level" required title="Please select a membership level">
+                            <option value="">Select a membership level</option>
+                            <option value="np">NP Membership (Non-Profit)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Business/Organization Description</label>
+                        <textarea id="description" name="description" title="Please describe your business or organization"></textarea>
+                    </div>
+                    
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </div>
+            
+            <div class="membership-cards">
+                <div class="membership-card non-profit">
+                    <h3>Non-Profit Membership</h3>
+                    <div class="price">Free</div>
+                    <p>For non-profit organizations with no membership fee</p>
+                    <a href="#" class="learn-more" data-modal="np-modal">Learn More</a>
+                </div>
+                
+                <div class="membership-card bronze">
+                    <h3>Bronze Membership</h3>
+                    <div class="price">$250/year</div>
+                    <p>Entry-level membership with basic benefits</p>
+                    <a href="#" class="learn-more" data-modal="bronze-modal">Learn More</a>
+                </div>
+                
+                <div class="membership-card silver">
+                    <h3>Silver Membership</h3>
+                    <div class="price">$500/year</div>
+                    <p>Enhanced benefits for growing businesses</p>
+                    <a href="#" class="learn-more" data-modal="silver-modal">Learn More</a>
+                </div>
+                
+                <div class="membership-card gold">
+                    <h3>Gold Membership</h3>
+                    <div class="price">$1,000/year</div>
+                    <p>Premium benefits for established businesses</p>
+                    <a href="#" class="learn-more" data-modal="gold-modal">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal benefits -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Non-Profit Membership Benefits</h2>
+            <ul class="benefits-list">
+                <li>Listing in our online directory</li>
+                <li>Access to member-only events</li>
+                <li>Monthly newsletter subscription</li>
+                <li>Networking opportunities</li>
+                <li>Volunteer recognition</li>
+                <li>Community spotlight opportunities</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Bronze Membership Benefits</h2>
+            <ul class="benefits-list">
+                <li>All Non-Profit benefits</li>
+                <li>Business listing with basic details</li>
+                <li>10% discount on chamber events</li>
+                <li>Access to business resources</li>
+                <li>Member referral program</li>
+                <li>Quarterly business workshops</li>
+                <li>Social media mentions</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Silver Membership Benefits</h2>
+            <ul class="benefits-list">
+                <li>All Bronze benefits</li>
+                <li>Enhanced business listing with logo</li>
+                <li>20% discount on chamber events</li>
+                <li>Priority registration for workshops</li>
+                <li>Featured in monthly member spotlight</li>
+                <li>Access to premium business resources</li>
+                <li>Invitation to exclusive networking events</li>
+                <li>Business training sessions</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Gold Membership Benefits</h2>
+            <ul class="benefits-list">
+                <li>All Silver benefits</li>
+                <li>Premium business listing with featured placement</li>
+                <li>30% discount on chamber events</li>
+                <li>Home page spotlight rotation</li>
+                <li>VIP access to all chamber events</li>
+                <li>Dedicated business consultant</li>
+                <li>Speaking opportunities at events</li>
+                <li>Annual business review</li>
+                <li>Sponsorship opportunities</li>
+                <li>Media exposure opportunities</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-contact">
+            <h3>IK's Chamber of Commerce</h3>
+            <p>1, IK's Lane, opposite nothing.</p>
+            <p>+1 123 456 789</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ikpemhinoghena" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; <span id="copyright-year"></span> Ikpemhinoghena Etiuzale | WDD 231 | Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+     
+    </script>
+</body>
+</html>
