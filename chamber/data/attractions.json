@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Yankari Game Reserve",
+        "address": "Bauchi State, Nigeria",
+        "description": "Nigeria's premier game reserve with natural warm springs, wildlife including elephants, lions, and over 350 bird species.",
+        "image": "images/yankari-reserve.webp"
+    },
+    {
+        "id": 2,
+        "name": "Great Wall of China",
+        "address": "Northern China",
+        "description": "The world's longest wall stretching over 13,000 miles, built to protect Chinese states from invasions. A UNESCO World Heritage site.",
+        "image": "images/great-wall.webp"
+    },
+    {
+        "id": 3,
+        "name": "Olumo Rock",
+        "address": "Abeokuta, Ogun State, Nigeria",
+        "description": "Ancient rock formation that served as a natural fortress during inter-tribal wars. Offers panoramic views of Abeokuta city.",
+        "image": "images/olumo-rock.webp"
+    },
+    {
+        "id": 4,
+        "name": "Forbidden City",
+        "address": "Beijing, China",
+        "description": "Imperial palace from Ming to Qing dynasties with 980 buildings. The world's largest palace complex and UNESCO site.",
+        "image": "images/forbidden-city.webp"
+    },
+    {
+        "id": 5,
+        "name": "Zuma Rock",
+        "address": "Niger State, Nigeria",
+        "description": "Monolithic rock formation often called 'Gateway to Abuja'. A prominent natural landmark visible from great distances.",
+        "image": "images/zuma-rock.webp"
+    },
+    {
+        "id": 6,
+        "name": "Terracotta Army",
+        "address": "Xi'an, Shaanxi Province, China",
+        "description": "Collection of terracotta sculptures depicting the armies of Qin Shi Huang, China's first emperor. Discovered in 1974.",
+        "image": "images/terracotta-army.webp"
+    },
+    {
+        "id": 7,
+        "name": "Erin Ijesha Waterfall",
+        "address": "Osun State, Nigeria",
+        "description": "Also known as Olumirin Waterfall, this seven-level waterfall offers breathtaking views and natural swimming pools.",
+        "image": "images/erin-ijesha.webp"
+    },
+    {
+        "id": 8,
+        "name": "Li River",
+        "address": "Guilin, Guangxi, China",
+        "description": "Famous for its stunning karst mountain landscape, featured on the 20 RMB note. Perfect for scenic boat cruises.",
+        "image": "images/li-river.webp"
+    }
+]

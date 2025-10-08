@@ -3,32 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for joining IK's Chamber of Commerce">
+    <meta name="description" content="Discover amazing attractions from Nigeria and China. Explore cultural heritage, natural wonders, and iconic landmarks from both nations.">
     <meta name="author" content="Ikpemhinoghena Etiuzale">
-    <meta name="keywords" content="Chamber of Commerce, thank you, membership confirmation">
-    <title>Thank You | IK's Chamber of Commerce</title>
-
+    <title>Ik's Chamber of Commerce | Discover</title>
+    
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="Thank You - IK's Chamber of Commerce">
-    <meta property="og:description" content="Thank you for joining IK's Chamber of Commerce">
-    <meta property="og:url" content="https://403yoyo.github.io/wdd231/chamber/thankyou.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_NG">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Thank You - IK's Chamber of Commerce">
-    <meta name="twitter:description" content="Thank you for joining IK's Chamber of Commerce">
-
+    
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/thankyou.css">
-
-    <script src="scripts/thankyou.js"></script>
+    <link rel="stylesheet" href="styles/discover.css">
     
+    <script src="scripts/discover.js" defer></script>
 </head>
 
 <body>
@@ -39,7 +27,7 @@
                 <button id="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                     <li><a href="about.html">About</a></li>
@@ -49,23 +37,48 @@
         </div>
     </header>
 
-    <main>
-        <div class="thankyou-container">
-            <h1>Thank You for Your Application!</h1>
-            <div class="thankyou-message">
-                <p>We appreciate your interest in joining IK's Chamber of Commerce. Your application has been received and is being processed.</p>
-                <p>A confirmation email will be sent to you shortly with further details about your membership.</p>
+    <main class="discover-main">
+        <section class="visitor-message">
+            <div class="message-content">
+                <span id="close-message">&times;</span>
+                <p id="visit-message"></p>
             </div>
+        </section>
+
+        <section class="discover-intro">
+            <h1>Discover Cultural Treasures</h1>
+            <p>Explore the rich heritage and breathtaking landscapes of Nigeria and China. From ancient rock formations to imperial palaces, experience the best of both cultures through these iconic attractions that showcase centuries of history and natural beauty.</p>
+        </section>
+
+        <section class="discover-grid" id="attractions-grid">
             
-            <div class="application-details">
-                <h2>Application Summary</h2>
-                <div id="application-summary">
-                    <!-- The rest will be in my JS -->
+        </section>
+
+        <section class="demographics">
+            <h2>Amazing Facts</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Nigerian Heritage</h3>
+                    <p class="stat-number">371+</p>
+                    <p>Distinct ethnic groups with rich cultural diversity</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Chinese History</h3>
+                    <p class="stat-number">3,500+</p>
+                    <p>Years of continuous written civilization</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Population</h3>
+                    <p class="stat-number">1.4B | 218M</p>
+                    <p>China (1.4B) & Nigeria (238M) estimated populations</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Languages</h3>
+                    <p class="stat-number">290 | 521</p>
+                    <p>China: 290+ languages | Nigeria: 521+ languages</p>
                 </div>
             </div>
-            
-            <a href="index.html" class="back-home">Return to Homepage</a>
-        </div>
+        </section>
     </main>
 
     <footer>

@@ -1,0 +1,275 @@
+.discover-main {
+    padding: 1.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.visitor-message {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.message-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-message {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+#close-message:hover {
+    color: var(--accent-color);
+}
+
+.discover-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.discover-intro h1 {
+    color: var(--heading-color);
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.discover-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.discover-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.discover-grid {
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.attraction-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    grid-area: auto;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.attraction-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover .attraction-image {
+    transform: scale(1.05);
+}
+
+.attraction-content {
+    padding: 1.5rem;
+}
+
+.attraction-content h2 {
+    color: var(--primary-color);
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.attraction-address {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.attraction-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.learn-more-btn {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.learn-more-btn:hover {
+    background: var(--primary-color);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.demographics {
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.demographics h2 {
+    text-align: center;
+    color: var(--heading-color);
+    font-family: 'Merriweather', serif;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
+}
+
+.stat-card p:last-child {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+@media (min-width: 641px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .attraction-card:hover .attraction-image {
+        filter: brightness(1.1) contrast(1.05);
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.5rem;
+    }
+    
+    .attraction-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .attraction-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .attraction-description {
+        flex: 1;
+    }
+    
+    .attraction-image {
+        transition: all 0.3s ease;
+    }
+    
+    .attraction-card:hover .attraction-image {
+        transform: scale(1.08);
+        filter: saturate(1.2) brightness(1.05);
+    }
+}
+
+.attraction-card:nth-child(1) { grid-area: card1; }
+.attraction-card:nth-child(2) { grid-area: card2; }
+.attraction-card:nth-child(3) { grid-area: card3; }
+.attraction-card:nth-child(4) { grid-area: card4; }
+.attraction-card:nth-child(5) { grid-area: card5; }
+.attraction-card:nth-child(6) { grid-area: card6; }
+.attraction-card:nth-child(7) { grid-area: card7; }
+.attraction-card:nth-child(8) { grid-area: card8; }
+
+/* Mobile adjustment side */
+@media (max-width: 640px) {
+    .discover-intro h1 {
+        font-size: 2rem;
+    }
+    
+    .discover-intro p {
+        font-size: 1rem;
+    }
+    
+    .attraction-content {
+        padding: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .attraction-card:hover .attraction-image {
+        transform: none;
+        filter: none;
+    }
+}
