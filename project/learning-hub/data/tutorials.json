@@ -1,5 +1,0 @@
-[
-  {"id":1,"title":"Intro to HTML","summary":"Learn the basics of HTML structure and elements","category":"html","popularity":95},
-  {"id":2,"title":"CSS for Layouts","summary":"Modern CSS techniques for layout using grid and flexbox","category":"css","popularity":88},
-  {"id":3,"title":"JavaScript Essentials","summary":"Core JS concepts for web development","category":"javascript","popularity":92}
-]
