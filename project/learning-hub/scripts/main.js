@@ -82,13 +82,13 @@ class LearningHubApp {
             });
         });
 
-        const videoLink = document.getElementById('videoLink');
-        if (videoLink) {
-            videoLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Project video demonstration will be linked here. This would typically open a modal with the embedded video.');
-            });
-        }
+        // const videoLink = document.getElementById('videoLink');
+        // if (videoLink) {
+        //     videoLink.addEventListener('click', (e) => {
+        //         e.preventDefault();
+        //         alert('Project video demonstration will be linked here. This would typically open a modal with the embedded video.');
+        //     });
+        // }
     }
 
     async filterTutorials() {
