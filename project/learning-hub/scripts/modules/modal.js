@@ -1,11 +1,9 @@
-// Modal management module
 export function initializeModals() {
     setupModalEventListeners();
     setupAuthModals();
 }
 
 function setupModalEventListeners() {
-    // Close modal when clicking outside
     window.addEventListener('click', (e) => {
         const modals = document.querySelectorAll('.modal');
         modals.forEach(modal => {
@@ -15,7 +13,6 @@ function setupModalEventListeners() {
         });
     });
 
-    // Close modal with escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             const modals = document.querySelectorAll('.modal');
@@ -25,7 +22,6 @@ function setupModalEventListeners() {
         }
     });
 
-    // Close buttons
     const closeButtons = document.querySelectorAll('.close-modal');
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -73,7 +69,6 @@ function setupAuthModals() {
         });
     }
 
-    // Form submissions
     const loginForm = document.getElementById('loginForm');
     const signupForm = document.getElementById('signupForm');
 
@@ -92,18 +87,15 @@ function handleLogin(e) {
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
 
-    // Simple validation
     if (!email || !password) {
         alert('Please fill in all fields');
         return;
     }
 
-    // In a real app, this would make an API call
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     const user = users.find(u => u.email === email && u.password === password);
 
     if (user) {
-        // Store user session
         localStorage.setItem('currentUser', JSON.stringify(user));
         alert('Login successful!');
         document.getElementById('loginModal').style.display = 'none';
@@ -126,19 +118,17 @@ function handleSignup(e) {
         return;
     }
 
-    // Check if user already exists
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     if (users.find(u => u.email === email)) {
         alert('User with this email already exists');
         return;
     }
 
-    // Create new user
     const newUser = {
         id: Date.now(),
         name,
         email,
-        password, // In real app, this would be hashed
+        password,
         interest,
         joined: new Date().toISOString()
     };
@@ -164,13 +154,11 @@ function updateAuthUI(user) {
     }
 }
 
-// Global logout function
 window.logout = function() {
     localStorage.removeItem('currentUser');
     location.reload();
 };
 
-// Check if user is logged in on page load
 document.addEventListener('DOMContentLoaded', () => {
     const currentUser = localStorage.getItem('currentUser');
     if (currentUser) {

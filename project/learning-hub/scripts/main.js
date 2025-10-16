@@ -1,4 +1,3 @@
-// Main application entry point
 import { initializeWeather } from './modules/weather.js';
 import { initializeTutorials } from './modules/tutorials.js';
 import { initializeModals } from './modules/modal.js';
@@ -19,23 +18,19 @@ class LearningHubApp {
     }
 
     async init() {
-        // Initialize all modules
         initializeStorage();
         initializeModals();
         await initializeWeather();
         await initializeTutorials();
         
-        // Set up event listeners
         this.setupEventListeners();
         
-        // Load user preferences
         this.loadUserPreferences();
         
         console.log('Learning Hub App initialized successfully');
     }
 
     setupEventListeners() {
-        // Search functionality
         const searchInput = document.getElementById('searchInput');
         const searchBtn = document.getElementById('searchBtn');
         
@@ -53,7 +48,6 @@ class LearningHubApp {
             });
         }
 
-        // Load more functionality
         const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', () => {
@@ -62,7 +56,6 @@ class LearningHubApp {
             });
         }
 
-        // Newsletter form
         const newsletterForm = document.getElementById('newsletterForm');
         if (newsletterForm) {
             newsletterForm.addEventListener('submit', (e) => {
@@ -71,7 +64,6 @@ class LearningHubApp {
             });
         }
 
-        // Mobile navigation
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
         
@@ -82,7 +74,6 @@ class LearningHubApp {
             });
         }
 
-        // Close mobile menu when clicking on links
         const navLinks = document.querySelectorAll('.nav-menu a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -91,7 +82,6 @@ class LearningHubApp {
             });
         });
 
-        // Video link
         const videoLink = document.getElementById('videoLink');
         if (videoLink) {
             videoLink.addEventListener('click', (e) => {
@@ -124,7 +114,6 @@ class LearningHubApp {
             this.currentTutorials = filtered;
             this.displayTutorials(filtered.slice(0, this.displayedTutorials));
             
-            // Show/hide load more button
             const loadMoreBtn = document.getElementById('loadMoreBtn');
             if (loadMoreBtn) {
                 loadMoreBtn.style.display = filtered.length > this.displayedTutorials ? 'block' : 'none';
@@ -164,7 +153,6 @@ class LearningHubApp {
             </div>
         `).join('');
 
-        // Add click event to tutorial cards
         container.querySelectorAll('.tutorial-card').forEach(card => {
             card.addEventListener('click', () => {
                 const tutorialId = card.getAttribute('data-id');
@@ -180,7 +168,6 @@ class LearningHubApp {
             const tutorial = tutorials.find(t => t.id == tutorialId);
             
             if (tutorial) {
-                // This would typically open a modal with detailed tutorial information
                 const modal = document.getElementById('tutorialModal');
                 const modalContent = document.getElementById('tutorialModalContent');
                 
@@ -216,7 +203,6 @@ class LearningHubApp {
     handleNewsletterSignup(form) {
         const email = form.querySelector('input[type="email"]').value;
         
-        // Store in localStorage
         const subscriptions = JSON.parse(localStorage.getItem('newsletterSubscriptions') || '[]');
         subscriptions.push({
             email,
@@ -224,7 +210,6 @@ class LearningHubApp {
         });
         localStorage.setItem('newsletterSubscriptions', JSON.stringify(subscriptions));
         
-        // Show success message
         alert('Thank you for subscribing to our newsletter!');
         form.reset();
     }
@@ -232,19 +217,16 @@ class LearningHubApp {
     loadUserPreferences() {
         const preferences = JSON.parse(localStorage.getItem('userPreferences') || '{}');
         
-        // Apply theme if set
+
         if (preferences.theme === 'dark') {
             document.body.classList.add('dark-theme');
         }
         
-        // Apply other preferences...
     }
 }
 
-// Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new LearningHubApp();
 });
 
-// Export for testing
 export default LearningHubApp;

@@ -1,4 +1,3 @@
-// Weather module for 3-day forecast
 const WEATHER_API_KEY = 'd94472af5d3fbcebf525946c6039f7e2';
 
 export async function initializeWeather() {
@@ -13,7 +12,6 @@ export async function initializeWeather() {
 
 async function loadWeatherData() {
     try {
-        // Get user's location or use default (London)
         const position = await getCurrentPosition();
         const { latitude, longitude } = position.coords;
         
@@ -22,8 +20,7 @@ async function loadWeatherData() {
         
     } catch (error) {
         console.error('Error loading weather data:', error);
-        // Fallback to default location
-        const fallbackWeather = await fetchWeatherData(51.5074, -0.1278); // London
+        const fallbackWeather = await fetchWeatherData(6.5244, 3.3792);
         displayWeatherData(fallbackWeather);
     }
 }
@@ -56,7 +53,6 @@ async function fetchWeatherData(lat, lon) {
 }
 
 function processWeatherData(data) {
-    // Group forecasts by day and get daily data
     const dailyForecasts = [];
     const seenDays = new Set();
     

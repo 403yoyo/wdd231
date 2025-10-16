@@ -1,5 +1,3 @@
-// About page specific functionality
-
 class AboutPage {
     constructor() {
         this.init();
@@ -11,7 +9,6 @@ class AboutPage {
     }
 
     setupEventListeners() {
-        // Contact form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
@@ -20,7 +17,6 @@ class AboutPage {
             });
         }
 
-        // Mission stats animation
         this.animateMissionStats();
     }
 
@@ -41,8 +37,8 @@ class AboutPage {
 
     animateCounter(element) {
         const target = parseInt(element.textContent);
-        const duration = 2000; // 2 seconds
-        const step = target / (duration / 16); // 60fps
+        const duration = 2000;
+        const step = target / (duration / 16);
         let current = 0;
 
         const timer = setInterval(() => {
@@ -59,7 +55,6 @@ class AboutPage {
         const form = document.getElementById('contactForm');
         if (!form) return;
 
-        // Add real-time validation
         const inputs = form.querySelectorAll('input, textarea');
         inputs.forEach(input => {
             input.addEventListener('blur', () => {
@@ -145,7 +140,6 @@ class AboutPage {
     }
 
     async handleContactForm(form) {
-        // Validate all fields
         const inputs = form.querySelectorAll('input, textarea');
         let allValid = true;
 
@@ -160,7 +154,6 @@ class AboutPage {
             return;
         }
 
-        // Get form data
         const formData = {
             name: document.getElementById('contactName').value.trim(),
             email: document.getElementById('contactEmail').value.trim(),
@@ -169,14 +162,12 @@ class AboutPage {
             timestamp: new Date().toISOString()
         };
 
-        // Show loading state
         const submitButton = form.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
         submitButton.innerHTML = '<div class="loading-spinner"></div> Sending...';
         submitButton.disabled = true;
 
         try {
-            // Simulate API call
             await this.sendContactMessage(formData);
             
             this.showFormMessage('Thank you for your message! We\'ll get back to you soon.', 'success');
@@ -186,48 +177,39 @@ class AboutPage {
             this.showFormMessage('Sorry, there was an error sending your message. Please try again.', 'error');
             console.error('Contact form error:', error);
         } finally {
-            // Reset button state
             submitButton.textContent = originalText;
             submitButton.disabled = false;
         }
     }
 
     async sendContactMessage(formData) {
-        // Simulate API call delay
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                // Store in localStorage (in real app, this would be a server API call)
                 const messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
                 messages.push(formData);
                 localStorage.setItem('contactMessages', JSON.stringify(messages));
                 
-                // Simulate random success/failure for demo
                 Math.random() > 0.1 ? resolve() : reject(new Error('Network error'));
             }, 1500);
         });
     }
 
     showFormMessage(message, type) {
-        // Remove existing messages
         const existingMessages = document.querySelectorAll('.form-message');
         existingMessages.forEach(msg => msg.remove());
 
-        // Create new message
         const messageElement = document.createElement('div');
         messageElement.className = `form-message ${type === 'success' ? 'success-message' : 'error-message'}`;
         messageElement.textContent = message;
 
-        // Insert after the form
         const form = document.getElementById('contactForm');
         form.parentNode.insertBefore(messageElement, form.nextSibling);
 
-        // Auto-remove after 5 seconds
         setTimeout(() => {
             messageElement.remove();
         }, 5000);
     }
 }
 
-// Initialize the about page
 const aboutPage = new AboutPage();
 window.aboutPage = aboutPage;

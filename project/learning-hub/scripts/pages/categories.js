@@ -1,4 +1,3 @@
-// Categories page specific functionality
 import { allTutorials } from '../modules/tutorials.js';
 
 class CategoriesPage {
@@ -18,7 +17,6 @@ class CategoriesPage {
 
     async loadCategoriesData() {
         try {
-            // Load tutorials if not already loaded
             if (allTutorials.length === 0) {
                 const response = await fetch('./data/tutorials.json');
                 const tutorials = await response.json();
@@ -28,7 +26,6 @@ class CategoriesPage {
             }
         } catch (error) {
             console.error('Error loading categories data:', error);
-            // Fallback to default categories
             this.createDefaultCategories();
         }
     }
@@ -54,7 +51,6 @@ class CategoriesPage {
             categoryMap[tutorial.category].tutorials.push(tutorial);
         });
 
-        // Calculate averages and add descriptions
         this.categories = Object.values(categoryMap).map(cat => ({
             ...cat,
             avgRating: (cat.totalRating / cat.count).toFixed(1),
@@ -219,7 +215,6 @@ class CategoriesPage {
             return;
         }
 
-        // Pick technology as featured category (usually the most popular)
         const featured = this.categories.find(cat => cat.id === 'technology') || this.categories[0];
         
         featuredContainer.innerHTML = `
@@ -272,7 +267,6 @@ class CategoriesPage {
     }
 
     updateStats() {
-        // Update global stats
         const totalTutorials = document.getElementById('totalTutorials');
         const totalStudents = document.getElementById('totalStudents');
         const completionRate = document.getElementById('completionRate');
@@ -289,7 +283,7 @@ class CategoriesPage {
         }
 
         if (completionRate) {
-            completionRate.textContent = '94%'; // This could be calculated from user data
+            completionRate.textContent = '94%';
         }
 
         if (avgRating) {
@@ -300,7 +294,6 @@ class CategoriesPage {
     }
 
     setupEventListeners() {
-        // CTA button
         const signupCta = document.getElementById('signupCta');
         if (signupCta) {
             signupCta.addEventListener('click', (e) => {
@@ -312,15 +305,12 @@ class CategoriesPage {
             });
         }
 
-        // Handle URL parameters for category filtering
         this.handleUrlParams();
 
-        // Add click listeners to category cards
         setTimeout(() => {
             const categoryCards = document.querySelectorAll('.category-detailed-card');
             categoryCards.forEach(card => {
                 card.addEventListener('click', (e) => {
-                    // Only navigate if not clicking a button
                     if (!e.target.closest('button')) {
                         const categoryId = card.getAttribute('data-category');
                         this.exploreCategory(categoryId);
@@ -335,7 +325,6 @@ class CategoriesPage {
         const category = urlParams.get('category');
         
         if (category) {
-            // If category is specified in URL, redirect to tutorials page with filter
             window.location.href = `tutorials.html?category=${category}`;
         }
     }
@@ -365,7 +354,6 @@ class CategoriesPage {
     }
 }
 
-// Initialize the categories page
 document.addEventListener('DOMContentLoaded', () => {
     const categoriesPage = new CategoriesPage();
     window.categoriesPage = categoriesPage;

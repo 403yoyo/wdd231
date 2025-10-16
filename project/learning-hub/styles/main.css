@@ -1,4 +1,3 @@
-/* Your Superior Color Scheme */
 :root {
     --primary-color: #1e88e5; /* blue - trust, learning, reliability */
     --secondary-color: #fbc02d; /* yellow - energy, optimism, highlights */
@@ -12,7 +11,6 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +28,6 @@ body {
     background-color: var(--background-color);
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -55,14 +52,12 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* Skip Link for Accessibility */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -80,7 +75,7 @@ p {
     top: 6px;
 }
 
-/* Buttons */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -137,7 +132,7 @@ p {
     color: white;
 }
 
-/* Header */
+
 .header {
     background-color: var(--white);
     box-shadow: var(--shadow);
@@ -168,7 +163,7 @@ p {
     font-size: 1.8rem;
 }
 
-/* Navigation */
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -314,7 +309,7 @@ p {
     opacity: 0.8;
 }
 
-/* Section Styles */
+
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
@@ -730,7 +725,7 @@ p {
     border-color: var(--primary-color);
 }
 
-/* Utility Classes */
+/*  */
 .text-center {
     text-align: center;
 }

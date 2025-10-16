@@ -1,4 +1,3 @@
-// Tutorials page specific functionality - STANDALONE VERSION
 console.log('TUTORIALS PAGE JS: Script loaded');
 
 class TutorialsPage {
@@ -26,7 +25,7 @@ class TutorialsPage {
         try {
             console.log('TUTORIALS PAGE JS: Loading tutorials from JSON...');
             
-            // Load directly from JSON file (like categories page does)
+            // Load directly from JSON file
             const response = await fetch('./data/tutorials.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -39,7 +38,6 @@ class TutorialsPage {
         } catch (error) {
             console.error('Error loading tutorials:', error);
             
-            // Fallback to localStorage if available
             const cached = localStorage.getItem('tutorialsData');
             if (cached) {
                 this.currentTutorials = JSON.parse(cached);
@@ -54,7 +52,6 @@ class TutorialsPage {
     setupEventListeners() {
         console.log('TUTORIALS PAGE JS: Setting up event listeners');
         
-        // Search input
         const searchInput = document.getElementById('tutorialSearch');
         if (searchInput) {
             searchInput.addEventListener('input', this.debounce((e) => {
@@ -63,7 +60,6 @@ class TutorialsPage {
             }, 300));
         }
 
-        // Category filter
         const categoryFilter = document.getElementById('categoryFilter');
         if (categoryFilter) {
             categoryFilter.addEventListener('change', (e) => {
@@ -72,7 +68,6 @@ class TutorialsPage {
             });
         }
 
-        // Difficulty filter
         const difficultyFilter = document.getElementById('difficultyFilter');
         if (difficultyFilter) {
             difficultyFilter.addEventListener('change', (e) => {
@@ -81,7 +76,6 @@ class TutorialsPage {
             });
         }
 
-        // Sort filter
         const sortFilter = document.getElementById('sortFilter');
         if (sortFilter) {
             sortFilter.addEventListener('change', (e) => {
@@ -90,7 +84,6 @@ class TutorialsPage {
             });
         }
 
-        // View toggle
         const viewButtons = document.querySelectorAll('.view-btn');
         viewButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -102,7 +95,6 @@ class TutorialsPage {
             });
         });
 
-        // Load more button
         const loadMoreBtn = document.getElementById('loadMoreTutorials');
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', () => {
@@ -110,7 +102,6 @@ class TutorialsPage {
             });
         }
 
-        // Newsletter form
         const newsletterForm = document.getElementById('tutorialsNewsletterForm');
         if (newsletterForm) {
             newsletterForm.addEventListener('submit', (e) => {
@@ -119,7 +110,6 @@ class TutorialsPage {
             });
         }
 
-        // Handle URL parameters for category filtering
         this.handleUrlParams();
     }
 
@@ -152,7 +142,6 @@ class TutorialsPage {
         console.log('TUTORIALS PAGE JS: Applying filters to', this.currentTutorials.length, 'tutorials');
         let filtered = [...this.currentTutorials];
 
-        // Apply search filter
         if (this.filters.search) {
             filtered = filtered.filter(tutorial => 
                 tutorial.title.toLowerCase().includes(this.filters.search) ||
@@ -161,21 +150,18 @@ class TutorialsPage {
             );
         }
 
-        // Apply category filter
         if (this.filters.category !== 'all') {
             filtered = filtered.filter(tutorial => 
                 tutorial.category === this.filters.category
             );
         }
 
-        // Apply difficulty filter
         if (this.filters.difficulty !== 'all') {
             filtered = filtered.filter(tutorial => 
                 tutorial.difficulty === this.filters.difficulty
             );
         }
 
-        // Apply sorting
         filtered = this.sortTutorials(filtered, this.filters.sort);
 
         console.log('TUTORIALS PAGE JS: Filtered to', filtered.length, 'tutorials');
@@ -545,17 +531,14 @@ class TutorialsPage {
     }
 }
 
-// Initialize the tutorials page
 document.addEventListener('DOMContentLoaded', function() {
     console.log('TUTORIALS PAGE JS: DOM loaded - initializing tutorials page');
     const tutorialsPage = new TutorialsPage();
     window.tutorialsPage = tutorialsPage;
     
-    // Manually call init
     tutorialsPage.init();
 });
 
-// Global functions for modal buttons
 window.startTutorial = function(tutorialId) {
     alert(`Starting tutorial: ${tutorialId}`);
 };

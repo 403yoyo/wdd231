@@ -1,4 +1,3 @@
-// Categories module for managing category data
 import { allTutorials } from './tutorials.js';
 
 let categories = [];
@@ -23,7 +22,6 @@ export function getCategoryById(categoryId) {
 }
 
 async function loadCategoriesData() {
-    // Ensure tutorials are loaded first
     if (allTutorials.length === 0) {
         console.warn('Tutorials not loaded yet, loading categories data directly');
         await loadCategoriesFromJSON();
@@ -64,7 +62,6 @@ function processCategoriesFromTutorials(tutorials = allTutorials) {
         categoryMap[tutorial.category].tutorials.push(tutorial);
     });
 
-    // Calculate averages and add descriptions
     categories = Object.values(categoryMap).map(cat => ({
         ...cat,
         avgRating: (cat.totalRating / cat.count).toFixed(1),

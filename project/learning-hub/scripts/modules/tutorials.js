@@ -1,4 +1,3 @@
-// Tutorials module for dynamic content
 import { debounce, formatDuration } from '../utils.js';
 
 let allTutorials = [];
@@ -25,12 +24,10 @@ async function loadTutorialsData() {
         }
         allTutorials = await response.json();
         
-        // Store in localStorage for offline access
         localStorage.setItem('tutorialsData', JSON.stringify(allTutorials));
         
     } catch (error) {
         console.error('Error fetching tutorials:', error);
-        // Try to load from localStorage as fallback
         const cached = localStorage.getItem('tutorialsData');
         if (cached) {
             allTutorials = JSON.parse(cached);
@@ -107,7 +104,6 @@ function displayFeaturedTutorials() {
     const featuredContainer = document.getElementById('featuredTutorials');
     if (!featuredContainer) return;
 
-    // Get featured tutorials (first 6)
     const featuredTutorials = allTutorials.slice(0, 6);
     
     featuredContainer.innerHTML = featuredTutorials.map(tutorial => `
@@ -131,7 +127,6 @@ function displayFeaturedTutorials() {
         </div>
     `).join('');
 
-    // Add click handlers
     featuredContainer.querySelectorAll('.tutorial-card').forEach(card => {
         card.addEventListener('click', () => {
             const tutorialId = card.getAttribute('data-id');
@@ -153,7 +148,6 @@ function getCategoryColor(category) {
 }
 
 function setupFilters() {
-    // Search filter
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
         searchInput.addEventListener('input', debounce((e) => {
@@ -161,7 +155,6 @@ function setupFilters() {
         }, 300));
     }
 
-    // Category filter (for tutorials page)
     const categoryFilter = document.getElementById('categoryFilter');
     if (categoryFilter) {
         categoryFilter.addEventListener('change', (e) => {
@@ -169,7 +162,6 @@ function setupFilters() {
         });
     }
 
-    // Difficulty filter
     const difficultyFilter = document.getElementById('difficultyFilter');
     if (difficultyFilter) {
         difficultyFilter.addEventListener('change', (e) => {
@@ -234,7 +226,6 @@ function updateTutorialsDisplay(tutorials) {
         </div>
     `).join('');
 
-    // Re-attach click handlers
     container.querySelectorAll('.tutorial-card').forEach(card => {
         card.addEventListener('click', () => {
             const tutorialId = card.getAttribute('data-id');
@@ -288,10 +279,8 @@ function showTutorialModal(tutorialId) {
     modal.style.display = 'block';
 }
 
-// Global functions for modal buttons
 window.startTutorial = function(tutorialId) {
     alert(`Starting tutorial: ${tutorialId}`);
-    // In a real app, this would redirect to the tutorial page
 };
 
 window.saveTutorial = function(tutorialId) {
