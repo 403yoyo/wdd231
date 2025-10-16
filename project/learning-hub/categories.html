@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Learning Hub</title>
+    <meta name="description" content="Explore all learning categories at Learning Hub - Technology, Cooking, Farming, Cosmetics and more">
+    <meta name="author" content="Learning Hub Team">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Categories - Learning Hub">
+    <meta property="og:description" content="Explore diverse learning categories and find your perfect tutorial">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learninghub.org/categories">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Learning Hub</span>
+                    </a>
+                </div>
+                
+                <nav class="nav">
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="categories.html" class="active">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="nav-auth">
+                            <a href="#" class="btn-login" id="loginBtn">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                            <a href="#" class="btn-signup" id="signupBtn">
+                                <i class="fas fa-user-plus"></i> Sign Up
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Learning Categories</h1>
+                <p>Explore our diverse range of learning categories and find your passion</p>
+            </div>
+        </section>
+
+        <!-- Categories Grid -->
+        <section class="categories-section detailed">
+            <div class="container">
+                <div class="categories-detailed-grid" id="categoriesDetailedGrid">
+                    <!-- Categories will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Spotlight -->
+        <section class="spotlight-section">
+            <div class="container">
+                <h2 class="section-title">Featured Category</h2>
+                <div class="spotlight-card" id="featuredCategory">
+                    <!-- Featured category will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="stat-number" id="totalTutorials">500+</div>
+                        <div class="stat-label">Total Tutorials</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number" id="totalStudents">10K+</div>
+                        <div class="stat-label">Active Students</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-number" id="completionRate">94%</div>
+                        <div class="stat-label">Completion Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-number" id="avgRating">4.7</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Learning?</h2>
+                    <p>Join thousands of students who are already advancing their skills with Learning Hub</p>
+                    <div class="cta-buttons">
+                        <a href="tutorials.html" class="btn btn-primary">Browse All Tutorials</a>
+                        <a href="#" class="btn btn-outline" id="signupCta">Create Free Account</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Learning Hub</span>
+                    </div>
+                    <p>Your gateway to knowledge and skill development.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ikpemhinoghena/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Ikpemhinoghena_" aria-label="X" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/ikpemhinoghena/" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Cooking</a></li>
+                        <li><a href="#">Farming</a></li>
+                        <li><a href="#">Cosmetics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="attributions.html">Attributions</a></li>
+                        <li><a href="#" id="videoLink">Project Video</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Learning Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create Your Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupInterest">Primary Interest</label>
+                    <select id="signupInterest">
+                        <option value="">Select your interest</option>
+                        <option value="technology">Technology</option>
+                        <option value="cooking">Cooking</option>
+                        <option value="farming">Farming</option>
+                        <option value="cosmetics">Cosmetics</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/pages/categories.js"></script>
+</body>
+</html>

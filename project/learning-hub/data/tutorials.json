@@ -1,0 +1,287 @@
+[
+  {
+    "id": 1,
+    "title": "HTML & CSS Fundamentals",
+    "description": "Learn the building blocks of web development with HTML and CSS",
+    "fullDescription": "This comprehensive course covers everything you need to know about HTML5 and CSS3. You'll learn semantic HTML, CSS layouts, responsive design, and modern web development practices.",
+    "category": "technology",
+    "difficulty": "beginner",
+    "duration": "4 hours",
+    "icon": "fab fa-html5",
+    "rating": 4.8,
+    "students": 12500,
+    "learningObjectives": [
+      "Create semantic HTML structure",
+      "Style websites with modern CSS",
+      "Build responsive layouts",
+      "Implement CSS animations"
+    ],
+    "prerequisites": "No prior experience needed"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript for Beginners",
+    "description": "Master the fundamentals of JavaScript programming",
+    "fullDescription": "Start your journey into web development with JavaScript. Learn variables, functions, DOM manipulation, and build interactive web applications.",
+    "category": "technology",
+    "difficulty": "beginner",
+    "duration": "6 hours",
+    "icon": "fab fa-js-square",
+    "rating": 4.7,
+    "students": 8900,
+    "learningObjectives": [
+      "Understand JavaScript syntax",
+      "Work with DOM elements",
+      "Handle user events",
+      "Build simple applications"
+    ],
+    "prerequisites": "Basic HTML knowledge"
+  },
+  {
+    "id": 3,
+    "title": "React.js Crash Course",
+    "description": "Build modern web applications with React.js",
+    "fullDescription": "Learn React.js from scratch. Understand components, state management, hooks, and build real-world projects.",
+    "category": "technology",
+    "difficulty": "intermediate",
+    "duration": "8 hours",
+    "icon": "fab fa-react",
+    "rating": 4.9,
+    "students": 6700,
+    "learningObjectives": [
+      "Understand React components",
+      "Manage state with hooks",
+      "Build reusable components",
+      "Create single-page applications"
+    ],
+    "prerequisites": "JavaScript fundamentals"
+  },
+  {
+    "id": 4,
+    "title": "Python Web Development",
+    "description": "Build web applications with Python and Django",
+    "fullDescription": "Learn backend development with Python. Master Django framework and build robust web applications.",
+    "category": "technology",
+    "difficulty": "intermediate",
+    "duration": "10 hours",
+    "icon": "fab fa-python",
+    "rating": 4.6,
+    "students": 5400,
+    "learningObjectives": [
+      "Python programming basics",
+      "Django framework fundamentals",
+      "Database integration",
+      "REST API development"
+    ],
+    "prerequisites": "Basic programming knowledge"
+  },
+  {
+    "id": 5,
+    "title": "Ethical Hacking Basics",
+    "description": "Introduction to penetration testing and cybersecurity",
+    "fullDescription": "Learn the fundamentals of ethical hacking and cybersecurity. Understand common vulnerabilities and protection methods.",
+    "category": "technology",
+    "difficulty": "advanced",
+    "duration": "12 hours",
+    "icon": "fas fa-shield-alt",
+    "rating": 4.8,
+    "students": 3200,
+    "learningObjectives": [
+      "Understand cybersecurity principles",
+      "Learn penetration testing tools",
+      "Identify system vulnerabilities",
+      "Implement security measures"
+    ],
+    "prerequisites": "Networking basics"
+  },
+  {
+    "id": 6,
+    "title": "Italian Cooking Masterclass",
+    "description": "Learn authentic Italian recipes and techniques",
+    "fullDescription": "Master the art of Italian cooking with traditional recipes and modern techniques from expert chefs.",
+    "category": "cooking",
+    "difficulty": "intermediate",
+    "duration": "5 hours",
+    "icon": "fas fa-pizza-slice",
+    "rating": 4.9,
+    "students": 2800,
+    "learningObjectives": [
+      "Master pasta making",
+      "Prepare authentic sauces",
+      "Bake traditional breads",
+      "Plate like a professional"
+    ],
+    "prerequisites": "Basic cooking skills"
+  },
+  {
+    "id": 7,
+    "title": "Sourdough Bread Baking",
+    "description": "From starter to perfect loaf - master sourdough",
+    "fullDescription": "Learn the complete process of sourdough bread making, from creating your starter to baking perfect artisan loaves.",
+    "category": "cooking",
+    "difficulty": "beginner",
+    "duration": "3 hours",
+    "icon": "fas fa-bread-slice",
+    "rating": 4.7,
+    "students": 4100,
+    "learningObjectives": [
+      "Create and maintain sourdough starter",
+      "Master dough fermentation",
+      "Shape and score techniques",
+      "Perfect baking methods"
+    ],
+    "prerequisites": "No experience needed"
+  },
+  {
+    "id": 8,
+    "title": "Organic Vegetable Gardening",
+    "description": "Grow your own organic vegetables at home",
+    "fullDescription": "Learn sustainable gardening practices to grow healthy, organic vegetables in your backyard or containers.",
+    "category": "farming",
+    "difficulty": "beginner",
+    "duration": "4 hours",
+    "icon": "fas fa-seedling",
+    "rating": 4.8,
+    "students": 2300,
+    "learningObjectives": [
+      "Plan your garden layout",
+      "Understand soil health",
+      "Companion planting techniques",
+      "Natural pest control"
+    ],
+    "prerequisites": "Basic gardening interest"
+  },
+  {
+    "id": 9,
+    "title": "Beekeeping for Beginners",
+    "description": "Start your journey into beekeeping and honey production",
+    "fullDescription": "Comprehensive guide to starting and maintaining beehives, harvesting honey, and supporting local ecosystems.",
+    "category": "farming",
+    "difficulty": "intermediate",
+    "duration": "6 hours",
+    "icon": "fas fa-bug",
+    "rating": 4.6,
+    "students": 1500,
+    "learningObjectives": [
+      "Set up and maintain beehives",
+      "Understand bee behavior",
+      "Harvest and process honey",
+      "Ensure hive health"
+    ],
+    "prerequisites": "Outdoor space available"
+  },
+  {
+    "id": 10,
+    "title": "Natural Skincare Formulation",
+    "description": "Create your own natural skincare products",
+    "fullDescription": "Learn to formulate safe, effective skincare products using natural ingredients and scientific principles.",
+    "category": "cosmetics",
+    "difficulty": "beginner",
+    "duration": "3 hours",
+    "icon": "fas fa-spa",
+    "rating": 4.7,
+    "students": 3800,
+    "learningObjectives": [
+      "Understand skincare ingredients",
+      "Formulate basic products",
+      "Safety and preservation",
+      "Labeling and packaging"
+    ],
+    "prerequisites": "No prior experience"
+  },
+  {
+    "id": 11,
+    "title": "Professional Makeup Artistry",
+    "description": "Master professional makeup techniques",
+    "fullDescription": "Learn professional makeup application for various occasions, skin types, and personal styles.",
+    "category": "cosmetics",
+    "difficulty": "intermediate",
+    "duration": "5 hours",
+    "icon": "fas fa-palette",
+    "rating": 4.8,
+    "students": 2900,
+    "learningObjectives": [
+      "Color theory and matching",
+      "Skin preparation techniques",
+      "Professional application methods",
+      "Special occasion makeup"
+    ],
+    "prerequisites": "Basic makeup knowledge"
+  },
+  {
+    "id": 12,
+    "title": "UI/UX Design Principles",
+    "description": "Design beautiful and functional user interfaces",
+    "fullDescription": "Master the principles of user interface and experience design for web and mobile applications.",
+    "category": "design",
+    "difficulty": "beginner",
+    "duration": "4 hours",
+    "icon": "fas fa-pencil-ruler",
+    "rating": 4.6,
+    "students": 5200,
+    "learningObjectives": [
+      "User research methods",
+      "Wireframing and prototyping",
+      "Visual design principles",
+      "Usability testing"
+    ],
+    "prerequisites": "No design experience needed"
+  },
+  {
+    "id": 13,
+    "title": "Digital Marketing Strategy",
+    "description": "Build effective digital marketing campaigns",
+    "fullDescription": "Learn to create and execute successful digital marketing strategies across multiple platforms.",
+    "category": "business",
+    "difficulty": "intermediate",
+    "duration": "6 hours",
+    "icon": "fas fa-chart-line",
+    "rating": 4.5,
+    "students": 3400,
+    "learningObjectives": [
+      "Social media marketing",
+      "SEO optimization",
+      "Content strategy",
+      "Analytics and measurement"
+    ],
+    "prerequisites": "Basic business knowledge"
+  },
+  {
+    "id": 14,
+    "title": "Mobile App Development",
+    "description": "Build cross-platform mobile applications",
+    "fullDescription": "Learn to develop mobile apps for iOS and Android using modern frameworks and tools.",
+    "category": "technology",
+    "difficulty": "advanced",
+    "duration": "15 hours",
+    "icon": "fas fa-mobile-alt",
+    "rating": 4.7,
+    "students": 2100,
+    "learningObjectives": [
+      "Cross-platform development",
+      "Native app features",
+      "App store deployment",
+      "Performance optimization"
+    ],
+    "prerequisites": "JavaScript and React knowledge"
+  },
+  {
+    "id": 15,
+    "title": "Data Science Fundamentals",
+    "description": "Introduction to data analysis and visualization",
+    "fullDescription": "Learn the basics of data science, including data cleaning, analysis, and visualization techniques.",
+    "category": "technology",
+    "difficulty": "intermediate",
+    "duration": "8 hours",
+    "icon": "fas fa-chart-bar",
+    "rating": 4.6,
+    "students": 1800,
+    "learningObjectives": [
+      "Data cleaning and preparation",
+      "Statistical analysis",
+      "Data visualization",
+      "Basic machine learning"
+    ],
+    "prerequisites": "Python programming basics"
+  }
+]
