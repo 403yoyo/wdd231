@@ -478,6 +478,15 @@
     color: var(--primary-color);
 }
 
+/* when a real photo is used inside .member-image, make it fill the circle */
+.member-image img.team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
 .member-role {
     color: var(--primary-color);
     font-weight: 500;
