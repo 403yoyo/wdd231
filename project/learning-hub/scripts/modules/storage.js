@@ -35,7 +35,7 @@ function loadUserPreferences() {
         document.body.classList.add('dark-theme');
     }
 
-    console.log('User preferences loaded:', preferences);
+    // console.log('User preferences loaded:', preferences);
 }
 
 export const storage = {

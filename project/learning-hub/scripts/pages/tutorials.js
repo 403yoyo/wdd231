@@ -1,8 +1,8 @@
-console.log('TUTORIALS PAGE JS: Script loaded');
+// console.log('TUTORIALS PAGE JS: Script loaded');
 
 class TutorialsPage {
     constructor() {
-        console.log('TUTORIALS PAGE JS: Constructor called');
+        // console.log('TUTORIALS PAGE JS: Constructor called');
         this.currentTutorials = [];
         this.displayedCount = 12;
         this.filters = {
@@ -14,16 +14,16 @@ class TutorialsPage {
     }
 
     async init() {
-        console.log('TUTORIALS PAGE JS: init() started');
+        // console.log('TUTORIALS PAGE JS: init() started');
         await this.loadTutorials();
         this.setupEventListeners();
         this.applyFilters();
-        console.log('TUTORIALS PAGE JS: init() completed');
+        // console.log('TUTORIALS PAGE JS: init() completed');
     }
 
     async loadTutorials() {
         try {
-            console.log('TUTORIALS PAGE JS: Loading tutorials from JSON...');
+            // console.log('TUTORIALS PAGE JS: Loading tutorials from JSON...');
             
             // Load directly from JSON file
             const response = await fetch('./data/tutorials.json');
@@ -32,16 +32,16 @@ class TutorialsPage {
             }
             this.currentTutorials = await response.json();
             
-            console.log('TUTORIALS PAGE JS: Tutorials loaded:', this.currentTutorials.length);
+            // console.log('TUTORIALS PAGE JS: Tutorials loaded:', this.currentTutorials.length);
             this.updateTutorialsCount();
             
         } catch (error) {
-            console.error('Error loading tutorials:', error);
+            // console.error('Error loading tutorials:', error);
             
             const cached = localStorage.getItem('tutorialsData');
             if (cached) {
                 this.currentTutorials = JSON.parse(cached);
-                console.log('TUTORIALS PAGE JS: Using cached tutorials:', this.currentTutorials.length);
+                // console.log('TUTORIALS PAGE JS: Using cached tutorials:', this.currentTutorials.length);
                 this.updateTutorialsCount();
             } else {
                 this.showError('Failed to load tutorials. Please try again later.');
@@ -50,7 +50,7 @@ class TutorialsPage {
     }
 
     setupEventListeners() {
-        console.log('TUTORIALS PAGE JS: Setting up event listeners');
+        // console.log('TUTORIALS PAGE JS: Setting up event listeners');
         
         const searchInput = document.getElementById('tutorialSearch');
         if (searchInput) {
@@ -139,7 +139,7 @@ class TutorialsPage {
     }
 
     applyFilters() {
-        console.log('TUTORIALS PAGE JS: Applying filters to', this.currentTutorials.length, 'tutorials');
+        // console.log('TUTORIALS PAGE JS: Applying filters to', this.currentTutorials.length, 'tutorials');
         let filtered = [...this.currentTutorials];
 
         if (this.filters.search) {
@@ -164,7 +164,7 @@ class TutorialsPage {
 
         filtered = this.sortTutorials(filtered, this.filters.sort);
 
-        console.log('TUTORIALS PAGE JS: Filtered to', filtered.length, 'tutorials');
+        // console.log('TUTORIALS PAGE JS: Filtered to', filtered.length, 'tutorials');
         this.displayTutorials(filtered.slice(0, this.displayedCount));
         this.updateActiveFilters();
         this.updateTutorialsCount(filtered.length);
@@ -201,7 +201,7 @@ class TutorialsPage {
     }
 
     displayTutorials(tutorials) {
-        console.log('TUTORIALS PAGE JS: Displaying', tutorials.length, 'tutorials');
+        // console.log('TUTORIALS PAGE JS: Displaying', tutorials.length, 'tutorials');
         this.displayGridView(tutorials);
         this.displayListView(tutorials);
         
@@ -216,7 +216,7 @@ class TutorialsPage {
     displayGridView(tutorials) {
         const gridContainer = document.getElementById('tutorialsGrid');
         if (!gridContainer) {
-            console.log('TUTORIALS PAGE JS: Grid container NOT found');
+            // console.log('TUTORIALS PAGE JS: Grid container NOT found');
             return;
         }
 
@@ -526,13 +526,13 @@ class TutorialsPage {
     }
 
     showError(message) {
-        console.error(message);
+        // console.error(message);
         alert(message);
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('TUTORIALS PAGE JS: DOM loaded - initializing tutorials page');
+    // console.log('TUTORIALS PAGE JS: DOM loaded - initializing tutorials page');
     const tutorialsPage = new TutorialsPage();
     window.tutorialsPage = tutorialsPage;
     

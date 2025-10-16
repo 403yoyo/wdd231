@@ -10,9 +10,9 @@ export async function initializeTutorials() {
         displayCategories();
         displayFeaturedTutorials();
         setupFilters();
-        console.log('Tutorials module initialized');
+        // console.log('Tutorials module initialized');
     } catch (error) {
-        console.error('Error initializing tutorials module:', error);
+        // console.error('Error initializing tutorials module:', error);
     }
 }
 
@@ -27,7 +27,7 @@ async function loadTutorialsData() {
         localStorage.setItem('tutorialsData', JSON.stringify(allTutorials));
         
     } catch (error) {
-        console.error('Error fetching tutorials:', error);
+        // console.error('Error fetching tutorials:', error);
         const cached = localStorage.getItem('tutorialsData');
         if (cached) {
             allTutorials = JSON.parse(cached);

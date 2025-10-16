@@ -12,7 +12,7 @@ class CategoriesPage {
         this.displayFeaturedCategory();
         this.updateStats();
         this.setupEventListeners();
-        console.log('Categories page initialized with', this.categories.length, 'categories');
+        // console.log('Categories page initialized with', this.categories.length, 'categories');
     }
 
     async loadCategoriesData() {
@@ -25,7 +25,7 @@ class CategoriesPage {
                 this.processCategories(allTutorials);
             }
         } catch (error) {
-            console.error('Error loading categories data:', error);
+            // console.error('Error loading categories data:', error);
             this.createDefaultCategories();
         }
     }
@@ -58,7 +58,7 @@ class CategoriesPage {
             icon: this.getCategoryIcon(cat.id)
         }));
 
-        console.log('Processed categories:', this.categories);
+        // console.log('Processed categories:', this.categories);
     }
 
     createDefaultCategories() {
@@ -151,7 +151,7 @@ class CategoriesPage {
     displayCategories() {
         const grid = document.getElementById('categoriesDetailedGrid');
         if (!grid) {
-            console.error('Categories grid element not found');
+            // console.error('Categories grid element not found');
             return;
         }
 
@@ -200,13 +200,13 @@ class CategoriesPage {
             </div>
         `).join('');
 
-        console.log('Categories displayed successfully');
+        // console.log('Categories displayed successfully');
     }
 
     displayFeaturedCategory() {
         const featuredContainer = document.getElementById('featuredCategory');
         if (!featuredContainer) {
-            console.error('Featured category element not found');
+            // console.error('Featured category element not found');
             return;
         }
 
@@ -251,7 +251,7 @@ class CategoriesPage {
             </div>
         `;
 
-        console.log('Featured category displayed:', featured.name);
+        // console.log('Featured category displayed:', featured.name);
     }
 
     getPopularTutorialDescription(categoryId) {
@@ -330,7 +330,7 @@ class CategoriesPage {
     }
 
     exploreCategory(categoryId) {
-        console.log('Exploring category:', categoryId);
+        // console.log('Exploring category:', categoryId);
         window.location.href = `tutorials.html?category=${categoryId}`;
     }
 

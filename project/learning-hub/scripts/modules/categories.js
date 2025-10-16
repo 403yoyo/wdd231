@@ -5,10 +5,10 @@ let categories = [];
 export async function initializeCategories() {
     try {
         await loadCategoriesData();
-        console.log('Categories module initialized with', categories.length, 'categories');
+        // console.log('Categories module initialized with', categories.length, 'categories');
         return categories;
     } catch (error) {
-        console.error('Error initializing categories module:', error);
+        // console.error('Error initializing categories module:', error);
         return [];
     }
 }
@@ -23,7 +23,7 @@ export function getCategoryById(categoryId) {
 
 async function loadCategoriesData() {
     if (allTutorials.length === 0) {
-        console.warn('Tutorials not loaded yet, loading categories data directly');
+        // console.warn('Tutorials not loaded yet, loading categories data directly');
         await loadCategoriesFromJSON();
     } else {
         processCategoriesFromTutorials();
@@ -36,7 +36,7 @@ async function loadCategoriesFromJSON() {
         const tutorials = await response.json();
         processCategoriesFromTutorials(tutorials);
     } catch (error) {
-        console.error('Error loading categories from JSON:', error);
+        // console.error('Error loading categories from JSON:', error);
         createDefaultCategories();
     }
 }

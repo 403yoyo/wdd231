@@ -175,7 +175,7 @@ class AboutPage {
             
         } catch (error) {
             this.showFormMessage('Sorry, there was an error sending your message. Please try again.', 'error');
-            console.error('Contact form error:', error);
+            // console.error('Contact form error:', error);
         } finally {
             submitButton.textContent = originalText;
             submitButton.disabled = false;

@@ -27,7 +27,7 @@ class LearningHubApp {
         
         this.loadUserPreferences();
         
-        console.log('Learning Hub App initialized successfully');
+        // console.log('Learning Hub App initialized successfully');
     }
 
     setupEventListeners() {
@@ -119,7 +119,7 @@ class LearningHubApp {
                 loadMoreBtn.style.display = filtered.length > this.displayedTutorials ? 'block' : 'none';
             }
         } catch (error) {
-            console.error('Error filtering tutorials:', error);
+            // console.error('Error filtering tutorials:', error);
         }
     }
 
@@ -196,7 +196,7 @@ class LearningHubApp {
                 modal.style.display = 'block';
             }
         } catch (error) {
-            console.error('Error loading tutorial details:', error);
+            // console.error('Error loading tutorial details:', error);
         }
     }
 

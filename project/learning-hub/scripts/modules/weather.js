@@ -3,9 +3,9 @@ const WEATHER_API_KEY = 'd94472af5d3fbcebf525946c6039f7e2';
 export async function initializeWeather() {
     try {
         await loadWeatherData();
-        console.log('Weather module initialized');
+        // console.log('Weather module initialized');
     } catch (error) {
-        console.error('Error initializing weather module:', error);
+        // console.error('Error initializing weather module:', error);
         displayWeatherError();
     }
 }
@@ -19,7 +19,7 @@ async function loadWeatherData() {
         displayWeatherData(weatherData);
         
     } catch (error) {
-        console.error('Error loading weather data:', error);
+        // console.error('Error loading weather data:', error);
         const fallbackWeather = await fetchWeatherData(6.5244, 3.3792);
         displayWeatherData(fallbackWeather);
     }
